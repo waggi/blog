@@ -9,17 +9,17 @@ class ArticlesControllerTest < ActionController::TestCase
     @article = nil
   end
 
-  test "should show article" do
+  test 'should show article' do
     get :show, id: @article.id
     assert_response :success
   end
 
-  test "should update article" do
+  test 'should update article' do
     patch :update, id: @article.id, article: {}
     assert_redirected_to article_path(assigns(:article))
   end
 
-  test "should destroy article" do
+  test 'should destroy article' do
     assert_difference('Article.count', -1) do
       delete :destroy, id: @article.id
     end
